@@ -1,0 +1,108 @@
+@startuml
+package br.univille.projfabsoft.entity {
+    class Usuario {
+        + Long id
+        + String nome
+        + String email
+        + String senha
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getEmail()
+        + void setEmail(String email)
+        + String getSenha()
+        + void setSenha(String senha)
+    }
+
+    class Evento {
+        + Long id
+        + String nome
+        + String local
+        + String data
+        + String hora
+        + Usuario usuario
+        + CategoriaEvento categoria
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+        + String getLocal()
+        + void setLocal(String local)
+        + String getData()
+        + void setData(String data)
+        + String getHora()
+        + void setHora(String hora)
+        + Usuario getUsuario()
+        + void setUsuario(Usuario usuario)
+        + CategoriaEvento getCategoria()
+        + void setCategoria(CategoriaEvento categoria)
+    }
+
+    class CategoriaEvento {
+        + Long id
+        + String nome
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+
+    class Endereco {
+        + Long id
+        + String rua
+        + String numero
+        + String cidade
+        + String estado
+        + String cep
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getRua()
+        + void setRua(String rua)
+        + String getNumero()
+        + void setNumero(String numero)
+        + String getCidade()
+        + void setCidade(String cidade)
+        + String getEstado()
+        + void setEstado(String estado)
+        + String getCep()
+        + void setCep(String cep)
+    }
+
+    class Papel {
+        + Long id
+        + String nome
+        --
+        + Long getId()
+        + void setId(Long id)
+        + String getNome()
+        + void setNome(String nome)
+    }
+
+    class Participacao {
+        + Long id
+        + Usuario usuario
+        + Evento evento
+        + boolean confirmado
+        --
+        + Long getId()
+        + void setId(Long id)
+        + Usuario getUsuario()
+        + void setUsuario(Usuario usuario)
+        + Evento getEvento()
+        + void setEvento(Evento evento)
+        + boolean isConfirmado()
+        + void setConfirmado(boolean confirmado)
+    }
+
+    Usuario "1" --> "*" Papel : papeis
+    Evento "1" --> "1" Usuario : usuario
+    Evento "1" --> "1" CategoriaEvento : categoria
+    Participacao "1" --> "1" Usuario : usuario
+    Participacao "1" --> "1" Evento : evento
+}
+@enduml
