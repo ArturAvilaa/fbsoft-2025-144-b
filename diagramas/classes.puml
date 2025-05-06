@@ -1,0 +1,111 @@
+@startuml
+skinparam classAttributeIconSize 0
+caption Diagrama de Classes - Entidades do Pacote br.univille.projfabsoft.entity
+
+package br.univille.projfabsoft.entity {
+    class Endereco {
+        - long id
+        - String rua
+        - String numero
+        - String cidade
+        - String estado
+        - String cep
+
+        + getId(): long
+        + setId(id: long): void
+        + getRua(): String
+        + setRua(rua: String): void
+        + getNumero(): String
+        + setNumero(numero: String): void
+        + getCidade(): String
+        + setCidade(cidade: String): void
+        + getEstado(): String
+        + setEstado(estado: String): void
+        + getCep(): String
+        + setCep(cep: String): void
+    }
+
+    class Usuario {
+        - Long id
+        - String nome
+        - String email
+        - String senha
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getNome(): String
+        + setNome(nome: String): void
+        + getEmail(): String
+        + setEmail(email: String): void
+        + getSenha(): String
+        + setSenha(senha: String): void
+    }
+
+    class Evento {
+        - Long id
+        - String nome
+        - String local
+        - String data
+        - String hora
+        - Usuario usuario
+        - CategoriaEvento categoria
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getNome(): String
+        + setNome(nome: String): void
+        + getLocal(): String
+        + setLocal(local: String): void
+        + getData(): String
+        + setData(data: String): void
+        + getHora(): String
+        + setHora(hora: String): void
+        + getUsuario(): Usuario
+        + setUsuario(usuario: Usuario): void
+        + getCategoria(): CategoriaEvento
+        + setCategoria(categoria: CategoriaEvento): void
+    }
+
+    class CategoriaEvento {
+        - Long id
+        - String nome
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getNome(): String
+        + setNome(nome: String): void
+    }
+
+    class Papel {
+        - Long id
+        - String nome
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getNome(): String
+        + setNome(nome: String): void
+    }
+
+    class Participacao {
+        - Long id
+        - Usuario usuario
+        - Evento evento
+        - boolean confirmado
+
+        + getId(): Long
+        + setId(id: Long): void
+        + getUsuario(): Usuario
+        + setUsuario(usuario: Usuario): void
+        + getEvento(): Evento
+        + setEvento(evento: Evento): void
+        + isConfirmado(): boolean
+        + setConfirmado(confirmado: boolean): void
+    }
+
+    Usuario "1" --> "*" Papel
+    Evento "1" --> "1" Usuario
+    Evento "1" --> "1" CategoriaEvento
+    Participacao "1" --> "1" Usuario
+    Participacao "1" --> "1" Evento
+}
+@enduml

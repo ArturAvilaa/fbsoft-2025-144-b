@@ -16,18 +16,21 @@ public class UsuarioController {
     @Autowired
     private UsuarioService service;
 
+    // GET todos os usuários
     @GetMapping
     public ResponseEntity<List<Usuario>> getAllUsuarios() {
         var listaUsuarios = service.getAllUsuarios();
         return ResponseEntity.ok(listaUsuarios);
     }
 
+    // POST - salvar um novo usuário
     @PostMapping
     public ResponseEntity<Usuario> save(@RequestBody Usuario usuario) {
         var usuarioSalvo = service.save(usuario);
-        return ResponseEntity.ok(usuarioSalvo);  
+        return ResponseEntity.ok(usuarioSalvo);  // Retorna o usuário salvo
     }
 
+    // GET por ID
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> getById(@PathVariable Long id) {
         var usuario = service.getById(id);
@@ -38,6 +41,7 @@ public class UsuarioController {
         }
     }
 
+    // DELETE
     @DeleteMapping("/{id}")
     public ResponseEntity<Usuario> delete(@PathVariable Long id) {
         var usuario = service.delete(id);
