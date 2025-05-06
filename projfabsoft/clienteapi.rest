@@ -1,0 +1,78 @@
+### API USUARIO - GET
+GET http://localhost:8080/api/v1/usuario
+
+### API CLIENTE - POST
+POST http://localhost:8080/api/v1/usuario
+Content-Type: application/json
+
+{
+    "nome": "zezinho",
+    "email": "ze@ze.com.br",
+    "senha": "abcd1234"
+}
+
+## Endpoints da API
+
+### API USUÁRIO
+POST /api/v1/usuarios
+```json
+{
+  "nome": "João Silva",
+  "email": "joao@email.com",
+  "senha": "senha123"
+}
+```
+
+GET /api/v1/usuarios
+
+### API PARTICIPANTE
+PUT /api/v1/participantes/{id}
+```json
+{
+  "nome": "Maria Souza Lima",
+  "email": "maria@email.com",
+  "telefone": "11999999999"
+}
+```
+
+DELETE /api/v1/participantes/{id}
+
+### API EVENTO
+GET /api/v1/eventos
+
+POST /api/v1/eventos
+```json
+{
+  "nome": "Workshop de Spring Boot",
+  "descricao": "Evento focado em desenvolvimento backend com Spring Boot",
+  "dataInicio": "2025-06-01",
+  "dataFim": "2025-06-02",
+  "local": "Auditório Central"
+}
+```
+
+PUT /api/v1/eventos/{id}
+```json
+{
+  "nome": "Workshop de Spring Boot - Atualizado",
+  "descricao": "Com conteúdo novo",
+  "dataInicio": "2025-06-01",
+  "dataFim": "2025-06-02",
+  "local": "Sala 101"
+}
+```
+
+DELETE /api/v1/eventos/{id}
+
+### API INSCRIÇÃO
+GET /api/v1/inscricoes
+
+POST /api/v1/inscricoes
+```json
+{
+  "eventoId": 1,
+  "participanteId": 2
+}
+```
+
+DELETE /api/v1/inscricoes/{id}

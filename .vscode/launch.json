@@ -2,13 +2,21 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "br.univille.Main",
+            "projectName": "br.univille-revisao_walter"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-ProjfabsoftApplication<projfabsoft>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "br.univille.projfabsoft.ProjfabsoftApplication",
             "projectName": "projfabsoft",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=52246 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=projfabsoft"
         }
     ]
 }

@@ -1,99 +1,88 @@
-# Fábrica de Software 2025/1
+# Sistema de Gestão de Eventos
 
-## Repositório dos alunos
-- [Repos](https://gist.github.com/d4e37df9f6772173110603fc8bf90b84.git)
+## Descrição
 
-## Propostas de projeto
+O **Sistema de Gestão de Eventos** é uma plataforma para facilitar a organização e o controle de eventos. Ele possibilita o registro de eventos, o gerenciamento de participantes, a definição de papéis (organizadores, participantes, palestrantes, etc.) e o agendamento de eventos. O sistema permite também o cadastro de categorias de eventos, além de possibilitar a confirmação ou cancelamento da participação dos usuários.
 
-- Nome do sistema Ex:(Sistema para Mecânica)
-  - Funcionalidade 1
-  - Funcionalidade 2
-  - Funcionalidade 3
+## Funcionalidades Principais
 
-<s>
+### 1. Cadastro de Eventos
+- O sistema permite o cadastro de eventos, onde o organizador pode preencher informações como nome, local, data, hora e endereço.
+- Os eventos podem ser classificados em diferentes categorias para facilitar a busca.
 
-- Nome do sistema Ex:(Sistema para Mecânica)
-  - Funcionalidade 1
-  - Funcionalidade 2
-  - Funcionalidade 3
+### 2. Cadastro de Categorias
+- É possível criar categorias para classificar os eventos, como "Seminários", "Conferências", "Workshops", etc. Isso ajuda a organizar melhor o sistema e a facilitar a busca de eventos.
 
-</s>
+### 3. Gestão de Usuários
+- Os usuários podem se cadastrar no sistema com informações pessoais (nome, email e senha).
+- Após o cadastro, os usuários podem buscar eventos, inscrever-se neles e gerenciar sua participação.
 
+### 4. Participação e Confirmação
+- O sistema permite que os usuários se inscrevam nos eventos e confirmem sua participação.
+- O organizador pode ver quem confirmou presença para organizar melhor o evento.
 
-## Livro Eng Software Moderna
-[Eng. Soft Moderna - Requisitos](https://engsoftmoderna.info/cap3.html)
+### 5. Gerenciamento de Papéis
+- Os organizadores podem definir papéis específicos para os usuários dentro de um evento, como "Organizador", "Palestrante" ou "Participante".
+
+### 6. Visualização de Eventos
+- Todos os eventos cadastrados no sistema podem ser visualizados pelos usuários, que poderão filtrar por categoria, nome ou data.
+- Isso facilita a busca por eventos de interesse.
+
+### 7. Alteração e Exclusão de Eventos
+- Os organizadores podem editar ou excluir eventos existentes. Isso é útil caso haja mudanças no local, data ou outros detalhes do evento.
+
+### 8. Cancelamento de Participação
+- Os usuários podem cancelar sua participação em um evento, caso não possam mais comparecer. O organizador será notificado sobre a desistência do participante.
 
 ## Histórias de Usuário
-- Como um Atendente eu gostaria de registrar os dados do cliente como: nome, endereço, telefone, email
-- Como um Atendente eu gostaria de registrar os dados do Carro do cliente como: marca, modelo, placa
-- Como um Atendente eu gostaria de vincular o Carro ao Cliente
-- Como um Atedente eu gostaria de agendar uma revisão com os seguintes dados: cliente, carro, data entrada, data saida, valor da revisão
-- Como um Atendente eu gostaria de vincular peças trocadas na revisão com os seguintes dados: codigo, nome, preço unitário
-- Como um Atendente eu gostaria de vincular os serviços de mão de obra realizados na revisão com os seguintes dados: nome do funcionário, quantidade de horas, valor
 
+### 1. Cadastro de Evento
+- **Como** organizador de eventos
+- **Eu gostaria de** cadastrar um novo evento com informações como nome, local, data, hora e endereço
+- **Para que** eu possa criar e gerenciar eventos para os participantes.
 
-## Comandos do Git
+### 2. Cadastro de Categoria de Evento
+- **Como** organizador de eventos
+- **Eu gostaria de** criar categorias para os eventos (ex: conferência, workshop, seminário)
+- **Para que** eu possa organizar os eventos por tipo e facilitar a busca dos usuários.
 
-### Instalação
-[Git Bash](https://git-scm.com/downloads)
+### 3. Cadastro de Usuário
+- **Como** usuário
+- **Eu gostaria de** me cadastrar no sistema com meus dados pessoais (nome, email e senha)
+- **Para que** eu possa participar de eventos e gerenciar minha participação.
 
-### Configuração inicial
+### 4. Associação de Usuário ao Evento
+- **Como** usuário
+- **Eu gostaria de** me inscrever em um evento
+- **Para que** eu possa participar do evento e obter informações sobre ele.
 
-```
-git config --global user.name "NOME DO USUARIO NO GITHUB"
-git config --global user.email "EMAIL DA CONTA DO GITHUB"
-```
-### Tipos de mensagens do commit
+### 5. Definição de Papéis no Evento
+- **Como** organizador de eventos
+- **Eu gostaria de** atribuir papéis aos usuários em um evento (ex: organizador, participante, palestrante)
+- **Para que** eu possa controlar as responsabilidades de cada usuário durante o evento.
 
-- feat: (new feature for the user, not a new feature for build script)
-- fix: (bug fix for the user, not a fix to a build script)
-- docs: (changes to the documentation)
-- style: (formatting, missing semi colons, etc; no production code change)
-- refactor: (refactoring production code, eg. renaming a variable)
-- test: (adding missing tests, refactoring tests; no production code change)
-- chore: (updating grunt tasks etc; no production code change)
+### 6. Confirmação de Participação
+- **Como** organizador de evento
+- **Eu gostaria de** saber se os participantes confirmaram sua presença no evento
+- **Para que** eu possa planejar o evento adequadamente.
 
-### Commit e Push
+### 7. Visualização de Evento
+- **Como** usuário
+- **Eu gostaria de** visualizar todos os eventos disponíveis no sistema
+- **Para que** eu possa escolher em qual evento eu desejo participar.
 
-```
-git add .
-git commit -m "tipo: o que foi feito"
-git push -u origin main
-```
+### 8. Edição de Evento
+- **Como** organizador de eventos
+- **Eu gostaria de** editar um evento existente
+- **Para que** eu possa alterar os detalhes do evento, como data, hora e local, caso necessário.
 
-### Ambiente de desenvolvimento JAVA
-[Eclipse Adoptium](https://adoptium.net/)
-[Microsoft OpenJDK](https://www.microsoft.com/openjdk)
-[AWS CORRETTO](https://aws.amazon.com/pt/corretto/)
-[VSCode](https://code.visualstudio.com/download)
-[Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+### 9. Gerenciamento de Participantes
+- **Como** organizador de evento
+- **Eu gostaria de** ver a lista de participantes confirmados em um evento
+- **Para que** eu possa ter um controle de quem irá comparecer.
 
-
-- JRE - Java Runtime Environment
-   - Java Virtual Machine JVM 
-     - java.exe / javaw.exe
-- JDK - Java Development Kit
-  - Compilar o java (javac.exe)
-
-## Diagrama de classes
-![Diagrama](./diagramas/png/classes.png)
-
-
-## Prompts Aula 01/04/2025
-- Encontrar as entidades nas histórias de usuário
-```bash
-@workspace #sym:## Histórias de Usuário quais são as entidades
-```
-- Gerar as classes java das entidades
-```bash
-@workspace por favor, crie as classe em java no pacote entity para representar as entidades
-```
-- Gerar o Diagrama de Classes de Entidade (Domínio)
-```bash
-@workspace por favor gere um diagrama uml no padrão plantuml das classes do pacote br.univille.projfabsoft
-```
-- Instalar a extensão [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
-
-## Diagrama de classes Entidade (Domínio)
-![Diagrama](./diagramas/png/classes_projfabsoft.png)
+### 10. Desvinculação de Participação
+- **Como** usuário
+- **Eu gostaria de** cancelar minha participação em um evento
+- **Para que** eu possa ser removido da lista de participantes se eu não puder comparecer.
 
