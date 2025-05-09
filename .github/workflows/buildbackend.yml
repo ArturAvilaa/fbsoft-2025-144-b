@@ -26,6 +26,10 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_PAT }}
 
+      # Verify login to GitHub Container Registry (check if Docker is logged in properly)
+      - name: Verify Docker Login
+        run: docker info
+
       # Build and push Docker image to GitHub Container Registry
       - name: Build and Push Docker Image
         run: |
