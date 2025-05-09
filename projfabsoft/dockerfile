@@ -8,7 +8,7 @@ WORKDIR /app
 COPY pom.xml ./
 RUN mvn dependency:go-offline -B
 
-# Copia o restante do código da aplicação
+# Copia o restantee do código da aplicação
 COPY src ./src
 
 # Compila o projeto e gera o arquivo JAR
