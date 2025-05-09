@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
@@ -20,10 +24,10 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GHCR_PAT }}
 
       # Build and push Docker image to GitHub Container Registry
       - name: Build and Push Docker Image
         run: |
-          docker build -t ghcr.io/arturavilaa/projfabsoft:latest
+          docker build -t ghcr.io/arturavilaa/projfabsoft:latest ./projfabsoft
           docker push ghcr.io/arturavilaa/projfabsoft:latest
