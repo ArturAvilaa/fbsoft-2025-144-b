@@ -1,78 +1,202 @@
-### API USUARIO - GET
+### API REST - FABSOFT
+
+### GET ALL
 GET http://localhost:8080/api/v1/usuario
 
-### API USUARIO - POST
+### GET BY ID
+GET http://localhost:8080/api/v1/usuario/{id}
+
+### POST NEW USER
 POST http://localhost:8080/api/v1/usuario
 Content-Type: application/json
 
 {
-    "nome": "zezinho",
+    "nome": "Clebinho",
     "email": "ze@ze.com.br",
     "senha": "abcd1234"
 }
 
-## Endpoints da API
+### PUT USER
+PUT http://localhost:8080/api/v1/usuario/{id}
+Content-Type: application/json
 
-### API USUÁRIO
-POST http://localhost:8080/api/v1/usuarios
-```json
 {
-  "nome": "João Silva",
-  "email": "joao@email.com",
-  "senha": "senha123"
+"nome": "Clebinho da 12",
+"email": "joaosilva@email.com",
+"senha": "novaSenha456"
 }
-```
 
-GET http://localhost:8080/api/v1/usuarios
+### DELETE
+DELETE http://localhost:8080/api/v1/usuario/{id}
 
-### API PARTICIPANTE
-PUT /api/v1/participantes/{id}
-```json
+
+### GET ALL PAPEL
+GET http://localhost:8080/api/v1/papeis
+
+### GET BY ID
+GET http://localhost:8080/api/v1/papeis/{id}
+
+### POST NEW PAPEL
+POST http://localhost:8080/api/v1/papeis
+Content-Type: application/json
+
 {
-  "nome": "Maria Souza Lima",
-  "email": "maria@email.com",
-  "telefone": "11999999999"
+"nome": "Administrador"
 }
-```
 
-DELETE http://localhost:8080/api/v1/participantes/{id}
+### PUT PAPEL
+PUT http://localhost:8080/api/v1/papeis/1
+Content-Type: application/json
 
-### API EVENTO
-GET http://localhost:8080/api/v1/eventos
-
-POST http://localhost:8080/api/v1/eventos
-```json
 {
-  "nome": "Workshop de Spring Boot",
-  "descricao": "Evento focado em desenvolvimento backend com Spring Boot",
-  "dataInicio": "2025-06-01",
-  "dataFim": "2025-06-02",
-  "local": "Auditório Central"
+"nome": "Usuário Comum"
 }
-```
 
-PUT http://localhost:8080/api/v1/eventos/{id}
-```json
+### DELETE
+DELETE http://localhost:8080/api/v1/papeis/1
+
+🔹 ENDEREÇO
+
+GET
+http://localhost:8080/api/v1/endereco
+
+GET (por ID)
+http://localhost:8080/api/v1/endereco/{id}
+
+POST
+http://localhost:8080/api/v1/endereco
+Content-Type: application/json
+
 {
-  "nome": "Workshop de Spring Boot - Atualizado",
-  "descricao": "Com conteúdo novo",
-  "dataInicio": "2025-06-01",
-  "dataFim": "2025-06-02",
-  "local": "Sala 101"
+"rua": "Av. Central",
+"numero": "100",
+"cidade": "Curitiba",
+"estado": "PR",
+"cep": "80000000"
 }
-```
 
-DELETE http://localhost:8080/api/v1/eventos/{id}
+PUT
+http://localhost:8080/api/v1/endereco/{id}
+Content-Type: application/json
 
-### API PARTICIPAÇÃO
-GET http://localhost:8080/api/v1/inscricoes
-
-POST http://localhost:8080/api/v1/inscricoes
-```json
 {
-  "eventoId": 1,
-  "participanteId": 2
+"rua": "Rua Nova",
+"numero": "101",
+"cidade": "Londrina",
+"estado": "PR",
+"cep": "86000000"
 }
-```
 
-DELETE http://localhost:8080/api/v1/inscricoes/{id}
+DELETE
+http://localhost:8080/api/v1/endereco/{id}
+
+🔹 CATEGORIA DE EVENTO
+
+GET
+http://localhost:8080/api/v1/categoriaevento
+
+GET (por ID)
+http://localhost:8080/api/v1/categoriaevento/{id}
+
+POST
+http://localhost:8080/api/v1/categoriaevento
+Content-Type: application/json
+
+{
+"nome": "Palestra"
+}
+
+PUT
+http://localhost:8080/api/v1/categoriaevento/{id}
+Content-Type: application/json
+
+{
+"nome": "Workshop"
+}
+
+DELETE
+http://localhost:8080/api/v1/categoriaevento/{id}
+
+🔹 EVENTO
+
+GET
+http://localhost:8080/api/v1/evento
+
+GET (por ID)
+http://localhost:8080/api/v1/evento/{id}
+
+POST
+http://localhost:8080/api/v1/evento
+Content-Type: application/json
+
+{
+"nome": "Semana Acadêmica",
+"local": "Auditório Central",
+"data": "2025-06-10",
+"hora": "19:00",
+"usuario": {
+"id": 1
+},
+"categoria": {
+"id": 2
+}
+}
+
+PUT
+http://localhost:8080/api/v1/evento/{id}
+Content-Type: application/json
+
+{
+"nome": "Feira de Tecnologia",
+"local": "Bloco C",
+"data": "2025-06-15",
+"hora": "14:00",
+"usuario": {
+"id": 1
+},
+"categoria": {
+"id": 3
+}
+}
+
+DELETE
+http://localhost:8080/api/v1/evento/{id}
+
+🔹 PARTICIPAÇÃO
+
+GET
+http://localhost:8080/api/v1/participacao
+
+GET (por ID)
+http://localhost:8080/api/v1/participacao/{id}
+
+POST
+http://localhost:8080/api/v1/participacao
+Content-Type: application/json
+
+{
+"usuario": {
+"id": 1
+},
+"evento": {
+"id": 5
+},
+"confirmado": true
+}
+
+PUT
+http://localhost:8080/api/v1/participacao/{id}
+Content-Type: application/json
+
+{
+"usuario": {
+"id": 1
+},
+"evento": {
+"id": 5
+},
+"confirmado": false
+}
+
+DELETE
+http://localhost:8080/api/v1/participacao/{id}

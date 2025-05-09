@@ -31,6 +31,17 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
+    public Usuario update(Long id, Usuario usuario) {  
+        Usuario existingUsuario = getById(id);  
+        if (existingUsuario != null) {
+            existingUsuario.setNome(usuario.getNome());  
+            existingUsuario.setEmail(usuario.getEmail());  
+            existingUsuario.setSenha(usuario.getSenha());  
+            return repository.save(existingUsuario);  
+        }
+        return null; 
+    }
+    @Override
     public Usuario delete(Long id) {  
         Usuario usuario = getById(id);
         if (usuario != null) {
