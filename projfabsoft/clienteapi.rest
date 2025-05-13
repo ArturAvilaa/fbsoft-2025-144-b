@@ -1,12 +1,14 @@
 ### API REST - FABSOFT
 
-### GET ALL
+######################## USUARIO
+
+### GET ALL - OK
 GET http://localhost:8080/api/v1/usuario
 
-### GET BY ID
-GET http://localhost:8080/api/v1/usuario/{id}
+### GET BY ID - OK
+GET http://localhost:8080/api/v1/usuario/1
 
-### POST NEW USER
+### POST NEW USER - OK
 POST http://localhost:8080/api/v1/usuario
 Content-Type: application/json
 
@@ -16,8 +18,8 @@ Content-Type: application/json
     "senha": "abcd1234"
 }
 
-### PUT USER
-PUT http://localhost:8080/api/v1/usuario/{id}
+### PUT USER - OK
+PUT http://localhost:8080/api/v1/usuario/1
 Content-Type: application/json
 
 {
@@ -26,17 +28,18 @@ Content-Type: application/json
 "senha": "novaSenha456"
 }
 
-### DELETE
-DELETE http://localhost:8080/api/v1/usuario/{id}
+### DELETE - OK
+DELETE http://localhost:8080/api/v1/usuario/1
 
+######################## PAPEL
 
-### GET ALL PAPEL
+### GET ALL PAPEL - OK
 GET http://localhost:8080/api/v1/papeis
 
-### GET BY ID
-GET http://localhost:8080/api/v1/papeis/{id}
+### GET BY ID - OK
+GET http://localhost:8080/api/v1/papeis/1
 
-### POST NEW PAPEL
+### POST NEW PAPEL - OK
 POST http://localhost:8080/api/v1/papeis
 Content-Type: application/json
 
@@ -44,7 +47,7 @@ Content-Type: application/json
 "nome": "Administrador"
 }
 
-### PUT PAPEL
+### PUT PAPEL - OK
 PUT http://localhost:8080/api/v1/papeis/1
 Content-Type: application/json
 
@@ -52,19 +55,19 @@ Content-Type: application/json
 "nome": "Usuário Comum"
 }
 
-### DELETE
+### DELETE - OK
 DELETE http://localhost:8080/api/v1/papeis/1
 
-🔹 ENDEREÇO
+######################## ENDEREÇO
 
-GET
-http://localhost:8080/api/v1/endereco
+### GET ALL ENDEREÇO - OK
+GET http://localhost:8080/api/v1/enderecos
 
-GET (por ID)
-http://localhost:8080/api/v1/endereco/{id}
+### GET BY ID
+GET http://localhost:8080/api/v1/enderecos/1
 
-POST
-http://localhost:8080/api/v1/endereco
+### POST NEW ENDEREÇO
+POST http://localhost:8080/api/v1/enderecos
 Content-Type: application/json
 
 {
@@ -75,8 +78,8 @@ Content-Type: application/json
 "cep": "80000000"
 }
 
-PUT
-http://localhost:8080/api/v1/endereco/{id}
+### PUT ENDEREÇO
+PUT http://localhost:8080/api/v1/enderecos/1
 Content-Type: application/json
 
 {
@@ -87,19 +90,19 @@ Content-Type: application/json
 "cep": "86000000"
 }
 
-DELETE
-http://localhost:8080/api/v1/endereco/{id}
+### DELETE
+DELETE http://localhost:8080/api/v1/enderecos/1
 
-🔹 CATEGORIA DE EVENTO
+######################## CATEGORIA EVENTO
 
-GET
-http://localhost:8080/api/v1/categoriaevento
+### GET ALL CATEGORIA EVENTO - OK
+GET http://localhost:8080/api/v1/categorias-evento
 
-GET (por ID)
-http://localhost:8080/api/v1/categoriaevento/{id}
+### GET BY ID - OK
+GET http://localhost:8080/api/v1/categorias-evento/1
 
-POST
-http://localhost:8080/api/v1/categoriaevento
+### POST NEW CATEGORIA EVENTO - OK
+POST http://localhost:8080/api/v1/categorias-evento
 Content-Type: application/json
 
 {
@@ -117,7 +120,7 @@ Content-Type: application/json
 DELETE
 http://localhost:8080/api/v1/categoriaevento/{id}
 
-🔹 EVENTO
+######################## EVENTO 
 
 GET
 http://localhost:8080/api/v1/evento
@@ -162,7 +165,7 @@ Content-Type: application/json
 DELETE
 http://localhost:8080/api/v1/evento/{id}
 
-🔹 PARTICIPAÇÃO
+######################## PARTICIPAÇÃO
 
 GET
 http://localhost:8080/api/v1/participacao
