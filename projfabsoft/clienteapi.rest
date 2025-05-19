@@ -13,7 +13,7 @@ POST http://localhost:8080/api/v1/usuario
 Content-Type: application/json
 
 {
-    "nome": "Clebinho",
+    "nome": "furão",
     "email": "ze@ze.com.br",
     "senha": "abcd1234"
 }
@@ -120,16 +120,16 @@ Content-Type: application/json
 DELETE
 http://localhost:8080/api/v1/categoriaevento/{id}
 
-######################## EVENTO 
+######################## EVENTO
 
-GET
-http://localhost:8080/api/v1/evento
+### GET ALL EVENTO - OK
+GET http://localhost:8080/api/v1/eventos
 
-GET (por ID)
-http://localhost:8080/api/v1/evento/{id}
+### GET BY ID - OK
+GET http://localhost:8080/api/v1/eventos/4
 
-POST
-http://localhost:8080/api/v1/evento
+### POST NEW EVENTO - OK
+POST http://localhost:8080/api/v1/eventos
 Content-Type: application/json
 
 {
@@ -145,8 +145,8 @@ Content-Type: application/json
 }
 }
 
-PUT
-http://localhost:8080/api/v1/evento/{id}
+### PUT EVENTO - OK
+PUT http://localhost:8080/api/v1/eventos/4
 Content-Type: application/json
 
 {
@@ -162,44 +162,44 @@ Content-Type: application/json
 }
 }
 
-DELETE
-http://localhost:8080/api/v1/evento/{id}
+### DELETE - OK
+DELETE http://localhost:8080/api/v1/eventos/4
 
 ######################## PARTICIPAÇÃO
 
-GET
-http://localhost:8080/api/v1/participacao
+### GET ALL PARTICIPAÇÃO - OK
+GET http://localhost:8080/api/v1/participacoes
 
-GET (por ID)
-http://localhost:8080/api/v1/participacao/{id}
+### GET BY ID - OK
+GET http://localhost:8080/api/v1/participacoes/1
 
-POST
-http://localhost:8080/api/v1/participacao
+### POST NEW PARTICIPAÇÃO - OK
+POST http://localhost:8080/api/v1/participacoes
 Content-Type: application/json
 
 {
 "usuario": {
-"id": 1
+"id": 3
 },
 "evento": {
-"id": 5
+"id": 1
 },
 "confirmado": true
 }
 
-PUT
-http://localhost:8080/api/v1/participacao/{id}
+### PUT PARTICIPAÇÃO - OK
+PUT http://localhost:8080/api/v1/participacoes/3
 Content-Type: application/json
 
 {
 "usuario": {
-"id": 1
+"id": 3
 },
 "evento": {
-"id": 5
+"id": 1
 },
 "confirmado": false
 }
 
-DELETE
-http://localhost:8080/api/v1/participacao/{id}
+### DELETE - OK
+DELETE http://localhost:8080/api/v1/participacoes/4

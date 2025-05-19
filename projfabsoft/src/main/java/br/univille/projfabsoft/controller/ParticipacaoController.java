@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/participacoes")
+@RequestMapping("/api/v1/participacoes")
 public class ParticipacaoController {
 
     @Autowired
