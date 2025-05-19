@@ -109,16 +109,16 @@ Content-Type: application/json
 "nome": "Palestra"
 }
 
-PUT
-http://localhost:8080/api/v1/categoriaevento/{id}
+### PUT CATEGORIA EVENTO - OK
+PUT http://localhost:8080/api/v1/categorias-evento/1
 Content-Type: application/json
 
 {
 "nome": "Workshop"
 }
 
-DELETE
-http://localhost:8080/api/v1/categoriaevento/{id}
+### DELETE - OK
+DELETE http://localhost:8080/api/v1/categorias-evento/1
 
 ######################## EVENTO
 
