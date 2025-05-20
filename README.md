@@ -1,3 +1,7 @@
+# Integrantes 
+Artur de Avila
+Deivid Matos
+
 # Sistema de Gestão de Eventos
 
 ## Descrição
