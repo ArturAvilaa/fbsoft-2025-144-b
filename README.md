@@ -1,3 +1,7 @@
+https://github.com/ArturAvilaa/fbsoft-2025-144-b
+
+https://github.com/waltercoan/fabsoft-2025-1-b
+
 # Integrantes 
 Artur de Avila
 Deivid Matos
