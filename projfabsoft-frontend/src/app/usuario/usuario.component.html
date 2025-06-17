@@ -1,13 +1,15 @@
 <main class="container">
     <h2>Usuarios</h2>
 
-    <a routerLink="/usuarios/novo" class="btn btn-primary">Novo</a>
+    <a (click)="novo()" class="btn btn-primary">Novo</a>
+
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
                 <th>emai</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -15,6 +17,8 @@
                 <td>{{umUsuario.id}} </td>
                 <td>{{umUsuario.nome}} </td>
                 <td>{{umUsuario.email}} </td>
+                <td><a (click)="alterar(umUsuario)"
+                    class="btn btn-primary">Alterar</a></td>
             </tr>
 
         </tbody>

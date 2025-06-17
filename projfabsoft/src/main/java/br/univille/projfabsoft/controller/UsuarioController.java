@@ -3,6 +3,7 @@ package br.univille.projfabsoft.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,13 @@ public class UsuarioController {
     
     @Autowired
     private UsuarioService service;
+
+    @GetMapping("{/id}")
+    public ResponseEntity<Usuario> getUsuarioId(@PathVariable long id){
+      var umUsuario = service.getById(id);
+      
+      return new ResponseEntity<Usuario>(umUsuario, HttpStatus.OK);  
+    }
 
     // GET todos os usuários
     @GetMapping

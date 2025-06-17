@@ -4,20 +4,26 @@ import { UsuarioService } from '../service/usuario.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { ɵNgNoValidate } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario',
-  imports: [HttpClientModule, CommonModule, RouterLink],
+  imports: [HttpClientModule, CommonModule],
   templateUrl: './usuario.component.html',
   styleUrl: './usuario.component.css',
-  providers: [UsuarioService]
+  providers: [UsuarioService, Router]
 })
 export class UsuarioComponent {
     listaUsuarios: Usuario[] = [];
 
-    constructor(private usuarioService: UsuarioService) {}
+    constructor(
+      private usuarioService: UsuarioService,
+      private router:Router
+    ) {}
 
+    novo(){
+      this.router.navigate(['usuarios/novo']); 
+    }
 
     ngOnInit(){
       console.log("carregando Usuarios...");
@@ -28,4 +34,7 @@ export class UsuarioComponent {
       )
     }
 
+    alterar(usuario:Usuario){
+      this.router.navigate(['usuarios/alterar', usuario.id]);
+    }
  }

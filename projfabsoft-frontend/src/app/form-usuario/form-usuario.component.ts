@@ -4,7 +4,7 @@ import { UsuarioService } from '../service/usuario.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-form-usuario',
@@ -18,9 +18,19 @@ export class FormUsuarioComponent {
 
   constructor(
     private UsuarioService:UsuarioService,                
-    private router:Router
+    private router:Router,
+    private activeRouter: ActivatedRoute
 
-  ){}
+  ){
+    const id = this.activeRouter.snapshot.paramMap.get('id');
+
+    if (id) {
+      this.UsuarioService.getUsuarioById(id).subscribe(usuario => {
+        this.usuario = this.usuario;
+      });
+    }
+
+  }
 
   salvar(){
     this.UsuarioService.saveUsuario(this.usuario)
