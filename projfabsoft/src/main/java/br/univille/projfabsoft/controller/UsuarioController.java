@@ -24,13 +24,6 @@ public class UsuarioController {
     @Autowired
     private UsuarioService service;
 
-    @GetMapping("{/id}")
-    public ResponseEntity<Usuario> getUsuarioId(@PathVariable long id){
-      var umUsuario = service.getById(id);
-      
-      return new ResponseEntity<Usuario>(umUsuario, HttpStatus.OK);  
-    }
-
     // GET todos os usuários
     @GetMapping
     public ResponseEntity<List<Usuario>> getAllUsuarios() {

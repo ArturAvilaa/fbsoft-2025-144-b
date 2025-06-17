@@ -26,7 +26,7 @@ export class FormUsuarioComponent {
 
     if (id) {
       this.UsuarioService.getUsuarioById(id).subscribe(usuario => {
-        this.usuario = this.usuario;
+        this.usuario = usuario;
       });
     }
 
