@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset e fonte base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef; /* Fundo fora da tabela */
+    color: #333;
+  }
+  
+  /* Container principal (card branco centralizado) */
+  main.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 32px;
+    background-color: #ffffff; /* Fundo da tabela */
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Título */
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #212529;
+  }
+  
+  /* Botão Novo */
+  .btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.25s ease;
+    margin-bottom: 24px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0b5ed7;
+  }
+  
+  /* Tabela estilizada */
+  table.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px #dee2e6;
+  }
+  
+  table.table thead {
+    background-color: #f8f9fa;
+  }
+  
+  table.table th {
+    text-align: left;
+    padding: 14px;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  table.table td {
+    padding: 14px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  /* Ações */
+  .btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    margin-right: 6px;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5c636a;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-danger:hover {
+    background-color: #bb2d3b;
+  }
+  
+  /* Modal */
+  .modal-content {
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-weight: 600;
+  }
+  
+  .modal-footer {
+    border-top: none;
+  }
+  

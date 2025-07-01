@@ -20,6 +20,9 @@ export class UsuarioService {
     }
     return this.http.post(this.apiURL,usuario);
   }
+  excluirUsuario(id: any){        
+    return this.http.delete<Usuario>(this.apiURL + '/' + id);
+  }
   getUsuarioById(id: any){
     return this.http.get<Usuario>(this.apiURL + `/` + id)
   }
